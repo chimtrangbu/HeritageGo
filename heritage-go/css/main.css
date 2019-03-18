@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.document-body {
+  background-color: #262626;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 5%;
+}
+
+.document-left {
+  width: 20%;
+  background-color: blue;
+}
+
+.document-center {
+  width: 60%;
+  background-color: red;
+}
+
+.document-right {
+  width: 20%;
+  background-color: yellow;
+}
+
+.logo {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.area-name {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.button {
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+.log-in {
+  margin: 24px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.line {
+  border-bottom: 1px solid black;
+  opacity: 0.0975;
+}
+
+
+.main-section {
+  background-color: #fafafa;
+}
