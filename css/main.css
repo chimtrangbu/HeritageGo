@@ -4,54 +4,56 @@
 }
 
 body {
-  color: #262626;
+    color: #262626;
 }
 
 .head {
-  width: 100%;
-  color: #262626;
-  display: flex;
-  height: 80px;
-  background-color: #fafafa;
-  border-bottom: 1px solid rgba(0,0,0,0.975)
+    width: 100%;
+    color: #262626;
+    display: flex;
+    height: 80px;
+    background-color: #fafafa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.975);
+
 }
 
 .head__left {
-  margin: auto;
+    margin: auto;
 }
 
 .head__center {
-  display: flex;
-  width: 600px;
-  justify-content: space-between;
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .head__center_logo {
-  width: 100px;
-  height: auto;
+    width: 100px;
+    height: auto;
 }
 
 .head__center_logo:hover {
-  transform: scale(1.1);
-  transition: all 100ms ease-out;
+    transform: scale(1.1);
+    transition: all 100ms ease-out;
 }
 
 .head__center__areanameIcon__areaname__primaryAreaName {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .head__center__areanameIcon__areaname__secondaryAreaName {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .head__center__areanameIcon__areaname__compasss {
-  font-size: 24px;
-  text-align: center;
-  margin-right: 6px;
-  animation-name: spin;
-  animation-duration: 2000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+    font-size: 24px;
+    text-align: center;
+    margin-right: 6px;
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .head__center__areanameIcon {
@@ -61,52 +63,53 @@ body {
 }
 
 .head__center__areanameIcon__areaname {
-  font-family: Arial;
-  text-align: center;
+    font-family: Arial;
+    text-align: center;
 }
 
 .head__right {
-  margin: auto;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .head__right__button {
-  font-family: Arial;
-  font-size: 14px;
-  text-align: center;
-  border-radius: 3px;
-  border-color: #e6e6e6;
-  margin-right: 24px;
-  padding: 8px;
-  background-color: #fafafa;
+    font-family: Arial;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    border-color: #e6e6e6;
+    margin-right: 24px;
+    padding: 8px;
+    background-color: #fafafa;
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
 
-  to {
-    transform: rotate(359deg);
-  }
+    to {
+        transform: rotate(359deg);
+    }
 }
 
 @media (max-width: 600px) {
-  body {
-    width: 100%;
-  }
+    body {
+        width: 100%;
+    }
 
-  .head__center_logo {
-    margin-left: 24px;
-  }
+    .head__center_logo {
+        margin: 24px;
+    }
 
-  .head__center__areanameIcon {
-    margin-right: 24px;
-  }
+    .head__center__areanameIcon {
+        margin: 24px;
+        width: max-content;
+    }
 
-  .head__right__button {
-    margin-left: 24px;
-  }
+    .head__right__button {
+        margin: 0px 24px;
+    }
 }
