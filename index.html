@@ -69,8 +69,8 @@
                     </div>
                     <div class="floating-label">
                         <input class="floating-input" type="password"
-                               placeholder=" ">
-                        <span class="fas fa-lock btn-password prefix"></span>
+                               placeholder=" " id="inputPassword">
+                        <span toggle="#inputPassword" class="fas fa-lock btn-password prefix toggle-password"></span>
                         <span class="highlight"></span>
                         <label>Password</label>
                     </div>
@@ -99,5 +99,17 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"
 ></script>
+
+<script>
+    $(".toggle-password").click(function () {
+        $(this).toggleClass("fa-unlock fa-unlock-alt");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") === "password") {
+            input.attr("type", "text");
+        } else {
+            input.attr("type", "password");
+        }
+    });
+</script>
 </body>
 </html>

@@ -16,7 +16,7 @@ body {
 }
 
 .head__left {
-    width: calc(100% - 1200px);
+    flex-grow: 1;
 }
 
 .head__center {
@@ -66,7 +66,7 @@ body {
 }
 
 .head__right {
-    width: calc(100% - 1200px);
+    flex-grow: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -81,6 +81,7 @@ body {
     margin-right: 24px;
     padding: 8px;
     background-color: #fafafa;
+    width: max-content;
 }
 
 @keyframes spin {
