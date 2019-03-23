@@ -13,7 +13,7 @@ body {
     color: #262626;
     display: flex;
     height: 80px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.975);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
 }
 
 .head__left {
@@ -59,7 +59,6 @@ body {
 .head__center__areanameIcon {
     display: flex;
     align-items: flex-start;
-    margin-right: 24px;
 }
 
 .head__center__areanameIcon__areaname {
@@ -232,12 +231,12 @@ label {
 /****  floating-Lable style end ****/
 
 
-.btn-password {
+.head__right__buttonIcon__password {
     float: right;
     margin-top: -25px;
 }
 
-.btn-login {
+.head__right__buttonLogin_button {
     margin: 0 32px 20px 32px;
     border-radius: 5px;
 }
@@ -340,7 +339,7 @@ label {
 
 .content__center__post__head__detail__top{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .content__center__post__head__detail__top__left {
@@ -350,11 +349,16 @@ label {
 .post__icon {
   width: 24px;
   height: 24px;
-  margin-right: 20px;
+  margin: 0 20px 0 20px;
   animation-name: shake;
   animation-duration: 800ms;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+.center__postBoard__image {
+    width: 598px;
+    height: auto;
 }
 
 @keyframes shake {

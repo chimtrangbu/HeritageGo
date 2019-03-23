@@ -53,7 +53,6 @@
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <!--Content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title w-100 font-weight-bold">Log In</h4>
@@ -72,12 +71,13 @@
                     <div class="floating-label">
                         <input class="floating-input" type="password"
                                placeholder=" " id="inputPassword">
-                        <span toggle="#inputPassword" class="fas fa-lock btn-password prefix toggle-password"></span>
+                        <span toggle="#inputPassword"
+                              class="fas fa-lock head__right__buttonIcon__password prefix toggle-password"></span>
                         <span class="highlight"></span>
                         <label>Password</label>
                     </div>
                 </div>
-                <button class="btn btn-primary btn-login">Login</button>
+                <button class="btn btn-primary head__right__buttonLogin_button">Login</button>
             </div>
         </div>
     </div> <!-- /.modal-->
@@ -87,12 +87,12 @@
     <div class="content__left"></div>
 
     <div class="content__center">
-        <div class="content__center__post">
+        <div class="content__center__post" hidden>
             <div class="content__center__post__head">
                 <div class="content__center__post__head__avatar"></div>
                 <div class="content__center__post__head__detail">
                     <div class="content__center__post__head__detail__top">
-                        <div class="content__center__post__head__detail__top__left">
+                        <div class="content__center__post__head__detail__top__left photo_title">
                             Saigon Notre-Dame Cathedral
                         </div>
                         <img src="./img/translate.png" class="post__icon" alt="transtate">
@@ -100,10 +100,12 @@
 
                     <div class="content__center__post__head__detail__bottom">
                         <div class="content__center__post__head__detail__bottom__position">
-                            <i class="fas fa-map-marker-alt"></i>Sài Gòn, Việt Nam
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="photo_taken_location">Sài Gòn, Việt Nam</span>
                         </div>
                         <div class="content__center__post__head__detail__bottom__time">
-                            <i class="far fa-clock">1991</i>
+                            <i class="far fa-clock"></i>
+                            <span class="photo_taken_time">1961</span>
                         </div>
                     </div>
                 </div>
@@ -115,15 +117,15 @@
                 <div class="content__center__post__reaction__left">
                     <div class="react content__center__post__reaction__left__love">
                         <i class="fas fa-heart"></i>
-                        0
+                        <span class="photo_like_count">0</span>
                     </div>
                     <div class="react content__center__post__reaction__left__comment">
                         <i class="fas fa-comment"></i>
-                        0
+                        <span class="photo_comment_count">0</span>
                     </div>
                     <div class="react content__center__post__reaction__left__camera">
                         <i class="fas fa-camera"></i>
-                        0
+                        <span class="photo_view_count">0</span>
                     </div>
                 </div>
                 <div class="center__postBoard__reaction__right">
@@ -150,6 +152,7 @@
 </script>
 <script src="js/toggle-password.js"></script>
 <script src="js/main.js"></script>
+<script src="js/heritagego-service.1.0.0.js"></script>
 <script
         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
