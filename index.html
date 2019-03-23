@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head href="./favicon1.png">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -21,7 +21,9 @@
     />
     <title>Héritage GO</title>
 </head>
+
 <body>
+<!--header-->
 <div class='head'>
     <div class="head__left"></div>
 
@@ -78,17 +80,76 @@
                 <button class="btn btn-primary btn-login">Login</button>
             </div>
         </div>
+    </div> <!-- /.modal-->
+</div> <!-- /.head  -->
+
+<div class="content">
+    <div class="content__left"></div>
+
+    <div class="content__center">
+        <div class="content__center__post">
+            <div class="content__center__post__head">
+                <div class="content__center__post__head__avatar"></div>
+                <div class="content__center__post__head__detail">
+                    <div class="content__center__post__head__detail__top">
+                        <div class="content__center__post__head__detail__top__left">
+                            Saigon Notre-Dame Cathedral
+                        </div>
+                        <img src="./img/translate.png" class="post__icon" alt="transtate">
+                    </div>
+
+                    <div class="content__center__post__head__detail__bottom">
+                        <div class="content__center__post__head__detail__bottom__position">
+                            <i class="fas fa-map-marker-alt"></i>Sài Gòn, Việt Nam
+                        </div>
+                        <div class="content__center__post__head__detail__bottom__time">
+                            <i class="far fa-clock">1991</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="./img/ducba.jpg" alt="postImage" class="center__postBoard__image">
+
+            <div class="content__center__post__reaction">
+                <div class="content__center__post__reaction__left">
+                    <div class="react content__center__post__reaction__left__love">
+                        <i class="fas fa-heart"></i>
+                        0
+                    </div>
+                    <div class="react content__center__post__reaction__left__comment">
+                        <i class="fas fa-comment"></i>
+                        0
+                    </div>
+                    <div class="react content__center__post__reaction__left__camera">
+                        <i class="fas fa-camera"></i>
+                        0
+                    </div>
+                </div>
+                <div class="center__postBoard__reaction__right">
+                    <div class="react content__center__post__reaction__right__bookmark">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content__center__post__comment">
+                <input type="text" name="comment" placeholder="Write a comment" class="commentBox">
+                <span class="fas fa-paper-plane"></span>
+            </div>
+        </div>
+
     </div>
 
-</div>
+    <div class="content__right"></div>
 </div>
 
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
-        crossorigin="anonymous"
-></script>
-<script src="js/heritagego-service.1.0.0.js"></script>
+        crossorigin="anonymous">
+</script>
+<script src="js/toggle-password.js"></script>
+<script src="js/main.js"></script>
 <script
         src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -100,16 +161,5 @@
         crossorigin="anonymous"
 ></script>
 
-<script>
-    $(".toggle-password").click(function () {
-        $(this).toggleClass("fa-unlock fa-unlock-alt");
-        var input = $($(this).attr("toggle"));
-        if (input.attr("type") === "password") {
-            input.attr("type", "text");
-        } else {
-            input.attr("type", "password");
-        }
-    });
-</script>
 </body>
 </html>
