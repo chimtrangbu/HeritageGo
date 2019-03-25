@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description"
+          content="Héritage GO is the community for heritage lovers.">
+    <link rel="shortcut icon" href="./img/favicon-96x96.png"
+          type="image/x-icon">
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+    />
+    <title>Héritage GO</title>
+</head>
+
+<body>
+<!--header-->
+<div class='head'>
+    <div class="head__left"></div>
+
+    <div class="head__center">
+        <img src="./img/heritagego_logo_128x73.png" alt="logo"
+             class="head__center_logo">
+
+        <div class="head__center__areanameIcon">
+            <div class="head__center__areanameIcon__areaname">
+                <div class="head__center__areanameIcon__areaname__primaryAreaName">
+                    Hồ Chí Minh city
+                </div>
+                <div class="head__center__areanameIcon__areaname__secondaryAreaName">
+                    Vietnam
+                </div>
+            </div>
+            <i class="head__center__areanameIcon__areaname__compasss far fa-compass"></i>
+        </div>
+    </div>
+
+    <div class="head__right">
+        <button class="head__right__button" data-toggle="modal"
+                data-target="#exampleModalCenter">Log In
+        </button>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title w-100 font-weight-bold">Log In</h4>
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="floating-label">
+                        <input class="floating-input" type="email"
+                               placeholder=" ">
+                        <span class="highlight"></span>
+                        <label>Email address</label>
+                    </div>
+                    <div class="floating-label">
+                        <input class="floating-input" type="password"
+                               placeholder=" " id="inputPassword">
+                        <span toggle="#inputPassword"
+                              class="fas fa-lock head__right__buttonIcon__password prefix toggle-password"></span>
+                        <span class="highlight"></span>
+                        <label>Password</label>
+                    </div>
+                </div>
+                <button class="btn btn-primary head__right__buttonLogin_button">Login</button>
+            </div>
+        </div>
+    </div> <!-- /.modal-->
+</div> <!-- /.head  -->
+
+<div class="content">
+    <div class="content__left"></div>
+
+    <div class="content__center">
+        <div id="post__default" class="content__center__post" hidden>
+            <div class="content__center__post__head">
+                <img src="./img/ducba.jpg" class="content__center__post__head__avatar" alt="avatar"/>
+                <div class="content__center__post__head__detail">
+                    <div class="content__center__post__head__detail__top">
+                        <div class="content__center__post__head__detail__top__left photo_title">
+                            Saigon Notre-Dame Cathedral
+                        </div>
+                        <img src="./img/translate.png" class="post__icon" alt="transtate">
+                    </div>
+
+                    <div class="content__center__post__head__detail__bottom">
+                        <div class="content__center__post__head__detail__bottom__position">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="photo_taken_location">Sài Gòn, Việt Nam</span>
+                        </div>
+                        <div class="content__center__post__head__detail__bottom__time">
+                            <i class="far fa-clock"></i>
+                            <span class="photo_taken_time">1961</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="./img/ducba.jpg" alt="postImage" class="center__postBoard__image">
+
+            <div class="content__center__post__reaction">
+                <div class="content__center__post__reaction__left">
+                    <div class="react content__center__post__reaction__left__love">
+                        <i class="fas fa-heart"></i>
+                        <span class="photo_like_count">0</span>
+                    </div>
+                    <div class="react content__center__post__reaction__left__comment">
+                        <i class="fas fa-comment"></i>
+                        <span class="photo_comment_count">0</span>
+                    </div>
+                    <div class="react content__center__post__reaction__left__camera">
+                        <i class="fas fa-camera"></i>
+                        <span class="photo_view_count">0</span>
+                    </div>
+                </div>
+                <div class="center__postBoard__reaction__right">
+                    <div class="react content__center__post__reaction__right__bookmark">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content__center__post__comment">
+                <input type="text" name="comment" placeholder="Write a comment" class="">
+                <span class="fas fa-paper-plane"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content__right"></div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous">
+</script>
+<script src="js/toggle-password.js"></script>
+<script src="js/main.js"></script>
+<script src="js/heritagego-service.1.0.0.js"></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"
+></script>
+
+</body>
+</html>
