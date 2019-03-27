@@ -8,32 +8,75 @@ body {
     color: #262626;
 }
 
+* {
+@include box-sizing(border-box);
+}
+body {
+    font: 1.5em/1.7 Gotham, Proxima Nova, Helvetica, sans-serif;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
 .head {
-    width: 100%;
-    color: #262626;
-    display: flex;
-    height: 80px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
-    background-color: transparent;
-    opacity: 0.35;
     position: fixed;
+    display: flex;
     top: 0;
     right: 0;
     left: 0;
-
+    background: #ffffff;
     z-index: 99;
     box-shadow: 0 0 .125em 0 rgba(0,0,0,.5);
     overflow: hidden;
     max-height: 80px;
-    &::after {
-         background: rgba(white,.5);
-         position: absolute;
-         display: block;
-         content: '';
-         top: 0; right: 0; bottom: 0; left: 0;
-         z-index: 4;
-    }
+    height: 80px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
 }
+
+.head::after {
+     background: rgba(white,.5);
+     content: '';
+     top: 0; right: 0; bottom: 0; left: 0;
+     z-index: 4;
+ }
+
+.content {
+    margin-top: 100px;
+    display: flex;
+    justify-items: center;
+}
+
+.head__center__box{
+    position: absolute;
+    display: flex;
+    height: 80px;
+    width: 100%;
+}
+
+.content__center {
+    width: 600px;
+    margin-top: 80px;
+@include transform(translateY(-50%));
+    left: 1em;
+    font-weight: bold;
+    clear: none;
+    display: inline-block;
+    vertical-align: bottom;
+    z-index: 5;
+    margin-right: 80px;
+}
+
+
+.content__center__post__head {
+    @include transform(translateY(-50%));
+}
+
+.content__center__post__reaction {
+    padding: 1em;
+    max-width: 30em;
+    margin: 0 auto;
+}
+
 
 .head__left {
     flex-grow: 1;
@@ -44,16 +87,23 @@ body {
     width: 600px;
     justify-content: space-between;
     align-items: center;
+    backdrop-filter: blur(10px);
+
 }
 
 .head__center_logo {
     width: 100px;
     height: auto;
+    z-index: 9999;
 }
 
 .head__center_logo:hover {
     transform: scale(1.1);
     transition: all 100ms ease-out;
+}
+
+.head__center__areanameIcon__areaname {
+    z-index: 99999;
 }
 
 .head__center__areanameIcon__areaname__primaryAreaName {
@@ -73,6 +123,7 @@ body {
     animation-duration: 2000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    z-index: 9999;
 }
 
 .head__center__areanameIcon {
@@ -260,22 +311,12 @@ label {
     border-radius: 5px;
 }
 
-.content {
-    display: flex;
-}
 
 .content__left {
     display: flex;
     flex-grow: 1;
 }
 
-.content__center {
-    display: flex;
-    width: 600px;
-    flex-direction: column;
-    margin-right: 80px;
-    margin-top: 80px;
-}
 
 .content__center__post {
     display: flex;

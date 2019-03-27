@@ -2,7 +2,7 @@ $(document).ready(function () {
     let content_center = $('.content__center');
 
     function getImages(x) {
-        mHeritageGoService.getPhotos({limit: 5, offset: x}).then(photos => {
+        mHeritageGoService.getPhotos({limit: 2, offset: x}).then(photos => {
             console.log(photos);
             let content_post = $('#post__default');
             $(photos).each(function () {
@@ -35,16 +35,20 @@ $(document).ready(function () {
     let x = 0;
     getImages(x);
 
+    let window_content =   $('#content__center');
+
     $(window).bind('scroll', function() {
-        if($(window).scrollTop() >= content_center.offset().top + content_center.outerHeight() - window.innerHeight-1) {
-            x += 5;
+        console.log( $(window).scrollTop() );
+        console.log(content_center.height() - $(window).height());
+        if($(window).scrollTop() >= content_center.height() - $(window).height()) {
+            // console.log( window_content.offset().top + window_content.outerHeight() - window.innerHeight-0.5);
+            x += 2;
             getImages(x);
         }
     });
 });
-
-var content = $('.site-content'),
-    header = $('.site-header');
+var content = $('.content'),
+    header = $('.head');
 
 $(content).clone().prependTo(header).addClass('blurred');
 
@@ -52,13 +56,15 @@ var blur = 'blur(.5em)';
 $('.blurred').css({
     'background': '#fff',
     '-webkit-filter': blur,
-    'filter': blur
+    'filter': blur,
+    'position': 'relative',
+    'width': '100%',
 });
 
 $(document).scroll(function(){
     var scroll = $(this).scrollTop();
     $('.blurred').css({
-        '-webkit-transform' : 'translateY(-'+scroll+'px)',
+        '-webkit-transform' : 'translateY(-'+scroll+50+'px)',
         'transform' : 'translateY(-'+scroll+'px)'
     });
 })

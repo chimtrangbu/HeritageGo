@@ -24,69 +24,68 @@
 
 <body>
 <!--header-->
-<div class='head'>
-    <div class="head__left"></div>
+<div class="head">
+    <div class="head__center__box">
+        <div class="head__left"></div>
 
-    <div class="head__center">
-        <img src="./img/heritagego_logo_128x73.png" alt="logo"
-             class="head__center_logo">
+        <div class="head__center">
+            <img src="./img/heritagego_logo_128x73.png" alt="logo"
+                 class="head__center_logo">
 
-        <div class="head__center__areanameIcon">
-            <div class="head__center__areanameIcon__areaname">
-                <div class="head__center__areanameIcon__areaname__primaryAreaName">
-                    Hồ Chí Minh city
-                </div>
-                <div class="head__center__areanameIcon__areaname__secondaryAreaName">
-                    Vietnam
-                </div>
-            </div>
-            <i class="head__center__areanameIcon__areaname__compasss far fa-compass"></i>
-        </div>
-    </div>
-
-    <div class="head__right">
-        <button class="head__right__button" data-toggle="modal"
-                data-target="#exampleModalCenter">Log In
-        </button>
-    </div>
-
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title w-100 font-weight-bold">Log In</h4>
-                    <button type="button" class="close" data-dismiss="modal"
-                            aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body mx-3">
-                    <div class="floating-label">
-                        <input class="floating-input" type="email"
-                               placeholder=" ">
-                        <span class="highlight"></span>
-                        <label>Email address</label>
+            <div class="head__center__areanameIcon">
+                <div class="head__center__areanameIcon__areaname">
+                    <div class="head__center__areanameIcon__areaname__primaryAreaName">
+                        Hồ Chí Minh city
                     </div>
-                    <div class="floating-label">
-                        <input class="floating-input" type="password"
-                               placeholder=" " id="inputPassword">
-                        <span toggle="#inputPassword"
-                              class="fas fa-lock head__right__buttonIcon__password prefix toggle-password"></span>
-                        <span class="highlight"></span>
-                        <label>Password</label>
+                    <div class="head__center__areanameIcon__areaname__secondaryAreaName">
+                        Vietnam
                     </div>
                 </div>
-                <button class="btn btn-primary head__right__buttonLogin_button">Login</button>
+                <i class="head__center__areanameIcon__areaname__compasss far fa-compass"></i>
             </div>
         </div>
-    </div> <!-- /.modal-->
+        <div class="head__right">
+            <button class="head__right__button" data-toggle="modal" data-target="#exampleModalCenter">Log In</button>
+        </div>
+    </div>
 </div> <!-- /.head  -->
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title w-100 font-weight-bold">Log In</h4>
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="floating-label">
+                    <input class="floating-input" type="email"
+                           placeholder=" ">
+                    <span class="highlight"></span>
+                    <label>Email address</label>
+                </div>
+                <div class="floating-label">
+                    <input class="floating-input" type="password"
+                           placeholder=" " id="inputPassword">
+                    <span toggle="#inputPassword"
+                          class="fas fa-lock head__right__buttonIcon__password prefix toggle-password"></span>
+                    <span class="highlight"></span>
+                    <label>Password</label>
+                </div>
+            </div>
+            <button class="btn btn-primary head__right__buttonLogin_button">Login</button>
+        </div>
+    </div>
+</div> <!-- /.modal-->
 
 <div class="content">
     <div class="content__left"></div>
 
-    <div class="content__center">
+    <div  id="content__center" class="content__center">
         <div id="post__default" class="content__center__post" hidden>
             <div class="content__center__post__head">
                 <img src="./img/ducba.jpg" class="content__center__post__head__avatar" alt="avatar"/>
@@ -135,7 +134,7 @@
                 </div>
             </div>
             <div class="content__center__post__comment">
-                <input type="text" name="comment" placeholder="Write a comment" class="">
+                <input type="text" name="comment" placeholder="Write a comment" class="commentBox">
                 <span class="fas fa-paper-plane"></span>
             </div>
         </div>
