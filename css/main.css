@@ -24,9 +24,7 @@ img {
     top: 0;
     right: 0;
     left: 0;
-    background: #ffffff;
     z-index: 99;
-    box-shadow: 0 0 .125em 0 rgba(0,0,0,.5);
     overflow: hidden;
     max-height: 80px;
     height: 80px;
@@ -35,13 +33,12 @@ img {
 
 .head::after {
      background: rgba(white,.5);
-     content: '';
      top: 0; right: 0; bottom: 0; left: 0;
      z-index: 4;
  }
 
 .content {
-    margin-top: 100px;
+    margin-top: 80px;
     display: flex;
     justify-items: center;
 }
@@ -55,15 +52,13 @@ img {
 
 .content__center {
     width: 600px;
-    margin-top: 80px;
-@include transform(translateY(-50%));
     left: 1em;
-    font-weight: bold;
-    clear: none;
     display: inline-block;
     vertical-align: bottom;
     z-index: 5;
     margin-right: 80px;
+    @include transform(translateY(-50%));
+    font-weight: bold;
 }
 
 
@@ -87,23 +82,16 @@ img {
     width: 600px;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(10px);
-
 }
 
 .head__center_logo {
     width: 100px;
     height: auto;
-    z-index: 9999;
 }
 
 .head__center_logo:hover {
     transform: scale(1.1);
     transition: all 100ms ease-out;
-}
-
-.head__center__areanameIcon__areaname {
-    z-index: 99999;
 }
 
 .head__center__areanameIcon__areaname__primaryAreaName {

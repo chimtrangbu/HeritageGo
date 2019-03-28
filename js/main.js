@@ -2,13 +2,12 @@ $(document).ready(function () {
     let content_center = $('.content__center');
 
     function getImages(x) {
-        mHeritageGoService.getPhotos({limit: 2, offset: x}).then(photos => {
+        mHeritageGoService.getPhotos({limit: 5, offset:x}).then(photos => {
             console.log(photos);
             let content_post = $('#post__default');
             $(photos).each(function () {
                 mHeritageGoService.getPhoto(this)
                     .then(photo => {
-                        console.log(photo);
                         let new_content = content_post.clone();
                         new_content.find('.content__center__post__head__avatar').attr("src", "http:" + photo.account.picture_url);
                         new_content.find('.photo_title').text(photo.title[0].content);
@@ -33,38 +32,40 @@ $(document).ready(function () {
     }
 
     let x = 0;
+
+
     getImages(x);
 
-    let window_content =   $('#content__center');
 
     $(window).bind('scroll', function() {
-        console.log( $(window).scrollTop() );
-        console.log(content_center.height() - $(window).height());
-        if($(window).scrollTop() >= content_center.height() - $(window).height()) {
-            // console.log( window_content.offset().top + window_content.outerHeight() - window.innerHeight-0.5);
-            x += 2;
+        var scrollHeight = $(document).height();
+        var scrollPosition = $(window).height() + $(window).scrollTop();
+        if((scrollHeight - scrollPosition) / scrollHeight === 0) {
+            x += 5;
             getImages(x);
         }
     });
+
+
 });
 var content = $('.content'),
     header = $('.head');
 
 $(content).clone().prependTo(header).addClass('blurred');
 
-var blur = 'blur(.5em)';
+var blur = 'blur(8px)';
 $('.blurred').css({
-    'background': '#fff',
-    '-webkit-filter': blur,
     'filter': blur,
+    '-webkit-filter': blur,
     'position': 'relative',
     'width': '100%',
 });
 
 $(document).scroll(function(){
-    var scroll = $(this).scrollTop();
+    var scroll = $(window).scrollTop();
     $('.blurred').css({
-        '-webkit-transform' : 'translateY(-'+scroll+50+'px)',
-        'transform' : 'translateY(-'+scroll+'px)'
+        '-webkit-transform' : 'translateY(-'+scroll+'px)',
+        'transform' : 'translateY(-'+scroll+'px)',
+        '-moz-transform'    : 'translateY(-' + scroll + 'px)',
     });
 })
