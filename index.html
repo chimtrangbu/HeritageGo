@@ -85,26 +85,35 @@
 <div class="content">
     <div class="content__left"></div>
 
-    <div class="content__center">
+    <div  id="content__center" class="content__center">
         <div id="post__default" class="content__center__post" hidden>
             <div class="content__center__post__head">
                 <img src="./img/ducba.jpg" class="content__center__post__head__avatar" alt="avatar"/>
                 <div class="content__center__post__head__detail">
                     <div class="content__center__post__head__detail__top">
-                        <div class="content__center__post__head__detail__top__left photo_title">
-                            Saigon Notre-Dame Cathedral
+                        <div class="content__center__post__head__detail__top__left  photo_title"></div>
+                        <div class="content__center__post__head__detail__top__left__language">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent; border: none;">
+                                <img src="./img/translate.png" onclick="stopShaking()" class="content__center__post__head__detail__top__left__translate__icon" alt="translate">
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a href="#googtrans(en|en)" class="lang-en lang-select" data-lang="en"><img src="https://www.solodev.com/assets/google-translate/flag-usa.png" alt="USA"></a>
+                                <a href="#googtrans(en|es)" class="lang-es lang-select" data-lang="es"><img src="https://www.solodev.com/assets/google-translate/flag-mexico.png" alt="MEXICO"></a>
+                                <a href="#googtrans(en|fr)" class="lang-es lang-select" data-lang="fr"><img src="https://www.solodev.com/assets/google-translate/flag-france.png" alt="FRANCE"></a>
+                                <a href="#googtrans(en|zh-CN)" class="lang-es lang-select" data-lang="zh-CN"><img src="https://www.solodev.com/assets/google-translate/flag-china.png" alt="CHINA"></a>
+                                <a href="#googtrans(en|ja)" class="lang-es lang-select" data-lang="ja"><img src="https://www.solodev.com/assets/google-translate/flag-japan.png" alt="JAPAN"></a>
+                            </div>
                         </div>
-                        <img src="./img/translate.png" class="post__icon" alt="transtate">
                     </div>
 
                     <div class="content__center__post__head__detail__bottom">
                         <div class="content__center__post__head__detail__bottom__position">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span class="photo_taken_location">Sài Gòn, Việt Nam</span>
+                            <span class="photo_taken_location"></span>
                         </div>
                         <div class="content__center__post__head__detail__bottom__time">
                             <i class="far fa-clock"></i>
-                            <span class="photo_taken_time">1961</span>
+                            <span class="photo_taken_time"></span>
                         </div>
                     </div>
                 </div>

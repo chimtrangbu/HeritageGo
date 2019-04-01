@@ -2,12 +2,13 @@ $(document).ready(function () {
     let content_center = $('.content__center');
 
     function getImages(x) {
-        mHeritageGoService.getPhotos({limit: 5, offset:x}).then(photos => {
+        mHeritageGoService.getPhotos({limit: 5, offset: x}).then(photos => {
             console.log(photos);
             let content_post = $('#post__default');
             $(photos).each(function () {
                 mHeritageGoService.getPhoto(this)
                     .then(photo => {
+                        console.log(photo);
                         let new_content = content_post.clone();
                         new_content.find('.content__center__post__head__avatar').attr("src", "http:" + photo.account.picture_url);
                         new_content.find('.photo_title').text(photo.title[0].content);
@@ -32,40 +33,62 @@ $(document).ready(function () {
     }
 
     let x = 0;
-
-
     getImages(x);
 
-
     $(window).bind('scroll', function() {
-        var scrollHeight = $(document).height();
-        var scrollPosition = $(window).height() + $(window).scrollTop();
+        let scrollHeight = $(document).height();
+        let scrollPosition = $(window).height() + $(window).scrollTop();
         if((scrollHeight - scrollPosition) / scrollHeight === 0) {
             x += 5;
             getImages(x);
         }
     });
-
-
 });
-var content = $('.content'),
+
+let content = $('.content'),
     header = $('.head');
 
 $(content).clone().prependTo(header).addClass('blurred');
 
-var blur = 'blur(8px)';
+let blur = 'blur(.5em)';
 $('.blurred').css({
-    'filter': blur,
     '-webkit-filter': blur,
+    'filter': blur,
     'position': 'relative',
     'width': '100%',
 });
 
 $(document).scroll(function(){
-    var scroll = $(window).scrollTop();
+    let scroll = $(this).scrollTop();
     $('.blurred').css({
-        '-webkit-transform' : 'translateY(-'+scroll+'px)',
+        '-webkit-transform' : 'translateY(-'+scroll+50+'px)',
         'transform' : 'translateY(-'+scroll+'px)',
         '-moz-transform'    : 'translateY(-' + scroll + 'px)',
     });
-})
+});
+
+
+function stopShaking() {
+    if ($(".content__center__post__head__detail__top__left__translate__icon").css("animation-play-state") === "running") {
+        $(this).css("animation-play-state", "paused");
+    } else {
+        $(this).css("animation-play-state", "running");
+    }
+}
+
+
+// $(".content__center__post__head__detail__top__left__language").on("click", function() {
+//     console.log('hehe');
+// });
+
+
+
+// $("#hehe").click(function(){
+//     console.log($(".content__center__post__head__detail__top__left__translate__icon").css("animation-play-state"))
+//     if ($(".content__center__post__head__detail__top__left__translate__icon").css("animation-play-state") === "running") {
+//         $(".content__center__post__head__detail__top__left__translate__icon").css("animation-play-state", "paused");
+//     } else {
+//         $(".content__center__post__head__detail__top__left__translate__icon").css("animation-play-state", "running");
+//     }
+// });
+
