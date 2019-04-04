@@ -68,27 +68,26 @@ $(document).scroll(function(){
 });
 
 
-function stopShaking() {
-    if ($(".content__center__post__head__detail__top__left__translate__icon").css("animation-play-state") === "running") {
-        $(this).css("animation-play-state", "paused");
+function stopShaking(image) {
+    if ($(image).find("#translate__icon").css("animation-play-state") === "running") {
+        $(image).find("#translate__icon").css("animation-play-state", "paused");
     } else {
-        $(this).css("animation-play-state", "running");
+        $(image).find("#translate__icon").css("animation-play-state", "running");
     }
 }
 
 
-// $(".content__center__post__head__detail__top__left__language").on("click", function() {
-//     console.log('hehe');
-// });
 
 
+function changeImage(flag) {
+    $(flag).attr("src", "https://www.solodev.com/assets/google-translate/flag-usa.png");
+    $(flag).css("animation-play-state", "none");
+    $(flag).css("animation-name", "none");
+    $(flag).css("animation-duration", "none");
+    $(flag).css("animation-timing-function", "none");
+    $(flag).css("animation-iteration-count", "none");
 
-// $("#hehe").click(function(){
-//     console.log($(".content__center__post__head__detail__top__left__translate__icon").css("animation-play-state"))
-//     if ($(".content__center__post__head__detail__top__left__translate__icon").css("animation-play-state") === "running") {
-//         $(".content__center__post__head__detail__top__left__translate__icon").css("animation-play-state", "paused");
-//     } else {
-//         $(".content__center__post__head__detail__top__left__translate__icon").css("animation-play-state", "running");
-//     }
-// });
-
+    let contents = $(".content__center__post__head__detail__top__left").text();
+    console.log(contents);
+    $(".content__center__post__head__detail__top__left").replaceWith($('<textarea class=content__center__post__head__detail__top__left cols="50">' + contents + '</textarea>'));
+}

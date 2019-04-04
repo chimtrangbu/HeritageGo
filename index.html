@@ -91,12 +91,12 @@
                 <img src="./img/ducba.jpg" class="content__center__post__head__avatar" alt="avatar"/>
                 <div class="content__center__post__head__detail">
                     <div class="content__center__post__head__detail__top">
-                        <div class="content__center__post__head__detail__top__left  photo_title"></div>
+                        <div class="content__center__post__head__detail__top__left  photo_title" id="image_title"></div>
                         <div class="content__center__post__head__detail__top__left__language">
-                            <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent; border: none;">
-                                <img src="./img/translate.png" onclick="stopShaking()" class="content__center__post__head__detail__top__left__translate__icon" alt="translate">
+                            <a href="#" id="dropdownMenuLink" onclick="stopShaking(this)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="./img/translate.png" id="translate__icon" class="content__center__post__head__detail__top__left__translate__icon" alt="translate">
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" onclick="changeImage(this)">
                                 <a href="#googtrans(en|en)" class="lang-en lang-select" data-lang="en"><img src="https://www.solodev.com/assets/google-translate/flag-usa.png" alt="USA"></a>
                                 <a href="#googtrans(en|es)" class="lang-es lang-select" data-lang="es"><img src="https://www.solodev.com/assets/google-translate/flag-mexico.png" alt="MEXICO"></a>
                                 <a href="#googtrans(en|fr)" class="lang-es lang-select" data-lang="fr"><img src="https://www.solodev.com/assets/google-translate/flag-france.png" alt="FRANCE"></a>
@@ -156,8 +156,8 @@
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
-        crossorigin="anonymous">
-</script>
+        crossorigin="anonymous"
+></script>
 <script src="js/toggle-password.js"></script>
 <script src="js/main.js"></script>
 <script src="js/heritagego-service.1.0.0.js"></script>

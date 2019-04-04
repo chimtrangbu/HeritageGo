@@ -87,7 +87,6 @@ img {
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(10px);
-    opacity: 0.35;
 }
 
 .head__center_logo {
