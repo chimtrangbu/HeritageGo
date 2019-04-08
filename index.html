@@ -1,176 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description"
-          content="Héritage GO is the community for heritage lovers.">
-    <link rel="shortcut icon" href="./img/favicon-96x96.png"
-          type="image/x-icon">
-    <link rel="stylesheet"
-          href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Héritage GO is the community for heritage lovers."
+    />
+    <!-- declare icon -->
     <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossorigin="anonymous"
+      rel="shortcut icon"
+      href="./img/favicon-96x96.png"
+      type="image/x-icon"
+    />
+    <!-- declare fontawasome library -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <!-- declare css file -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- declare bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
     />
     <title>Héritage GO</title>
-</head>
+  </head>
 
-<body>
-<!--header-->
-<div class="head">
-    <div class="head__center__box">
+  <body>
+    <div class="head">
+      <div id="head">
         <div class="head__left"></div>
+        <!-- /.head__left -->
 
         <div class="head__center">
-            <img src="./img/heritagego_logo_128x73.png" alt="logo"
-                 class="head__center_logo">
+          <img
+            src="./img/heritagego_logo_128x73.png"
+            alt="logo"
+            class="head__center_logo"
+          />
 
-            <div class="head__center__areanameIcon">
-                <div class="head__center__areanameIcon__areaname">
-                    <div class="head__center__areanameIcon__areaname__primaryAreaName">
-                        Hồ Chí Minh city
-                    </div>
-                    <div class="head__center__areanameIcon__areaname__secondaryAreaName">
-                        Vietnam
-                    </div>
-                </div>
-                <i class="head__center__areanameIcon__areaname__compasss far fa-compass"></i>
+          <div class="head__center__areanameIcon">
+            <div class="head__center__areanameIcon__areaname">
+              <div
+                class="head__center__areanameIcon__areaname__primaryAreaName"
+              >
+                Hồ Chí Minh city
+              </div>
+              <!-- /.head__center__areanameIcon__areaname__primaryAreaName -->
+              <div
+                class="head__center__areanameIcon__areaname__secondaryAreaName"
+              >
+                Vietnam
+              </div>
+              <!-- /.head__center__areanameIcon__areaname__secondaryAreaName -->
             </div>
+            <!-- /.head__center__areanameIcon__areaname -->
+            <i
+              class="head__center__areanameIcon__areaname__compasss far fa-compass"
+            ></i>
+          </div>
+          <!-- /.head__center__areanameIcon -->
         </div>
+        <!-- /.head__center -->
+
         <div class="head__right">
-            <button class="head__right__button" data-toggle="modal" data-target="#exampleModalCenter">Log In</button>
+          <button
+            class="head__right__button"
+            data-toggle="modal"
+            data-target="#exampleModalCenter"
+          >
+            Log In</button
+          ><!-- /.head__right__button-->
         </div>
+        <!-- /.head__right -->
+      </div>
+      <!-- /#head -->
     </div>
-</div> <!-- /.head  -->
+    <!-- /.head  -->
 
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <!-- modal boostrap log in pop up -->
+    <div
+      class="modal fade"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <!--Content-->
         <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title w-100 font-weight-bold">Log In</h4>
-                <button type="button" class="close" data-dismiss="modal"
-                        aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+          <div class="modal-header">
+            <h4 class="modal-title w-100 font-weight-bold">Log In</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3">
+            <div class="floating-label">
+              <input
+                id="email"
+                class="floating-input"
+                type="email"
+                placeholder=" "
+              />
+              <span class="highlight"></span>
+              <label>Email address</label>
             </div>
-            <div class="modal-body mx-3">
-                <div class="floating-label">
-                    <input class="floating-input" type="email"
-                           placeholder=" ">
-                    <span class="highlight"></span>
-                    <label>Email address</label>
-                </div>
-                <div class="floating-label">
-                    <input class="floating-input" type="password"
-                           placeholder=" " id="inputPassword">
-                    <span toggle="#inputPassword"
-                          class="fas fa-lock head__right__buttonIcon__password prefix toggle-password"></span>
-                    <span class="highlight"></span>
-                    <label>Password</label>
-                </div>
+
+            <div class="floating-label">
+              <input
+                id="password"
+                class="floating-input"
+                type="password"
+                placeholder=" "
+              />
+              <span
+                id="lock"
+                class="fas fa-lock btn-password prefix"
+                onclick="visibilityPassword()"
+              ></span>
+              <span class="highlight"></span>
+              <label>Password</label>
             </div>
-            <button class="btn btn-primary head__right__buttonLogin_button">Login</button>
+          </div>
+          <button class="btn btn-primary btn-login">Login</button>
         </div>
+      </div>
     </div>
-</div> <!-- /.modal-->
+    <!-- /.modal-->
 
-<div class="content">
-    <div class="content__left"></div>
+    <div class="content">
+      <div class="content__left"></div>
+      <!-- ./content__left -->
 
-    <div  id="content__center" class="content__center">
-        <div id="post__default" class="content__center__post" hidden>
-            <div class="content__center__post__head">
-                <img src="./img/ducba.jpg" class="content__center__post__head__avatar" alt="avatar"/>
-                <div class="content__center__post__head__detail">
-                    <div class="content__center__post__head__detail__top">
-                        <div class="content__center__post__head__detail__top__left  photo_title" id="image_title"></div>
-                        <div class="content__center__post__head__detail__top__left__language">
-                            <a href="#" id="dropdownMenuLink" onclick="stopShaking(this)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="./img/translate.png" id="translate__icon" class="content__center__post__head__detail__top__left__translate__icon" alt="translate">
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" onclick="changeImage(this)">
-                                <a href="#googtrans(en|en)" class="lang-en lang-select" data-lang="en"><img src="https://www.solodev.com/assets/google-translate/flag-usa.png" alt="USA"></a>
-                                <a href="#googtrans(en|es)" class="lang-es lang-select" data-lang="es"><img src="https://www.solodev.com/assets/google-translate/flag-mexico.png" alt="MEXICO"></a>
-                                <a href="#googtrans(en|fr)" class="lang-es lang-select" data-lang="fr"><img src="https://www.solodev.com/assets/google-translate/flag-france.png" alt="FRANCE"></a>
-                                <a href="#googtrans(en|zh-CN)" class="lang-es lang-select" data-lang="zh-CN"><img src="https://www.solodev.com/assets/google-translate/flag-china.png" alt="CHINA"></a>
-                                <a href="#googtrans(en|ja)" class="lang-es lang-select" data-lang="ja"><img src="https://www.solodev.com/assets/google-translate/flag-japan.png" alt="JAPAN"></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content__center__post__head__detail__bottom">
-                        <div class="content__center__post__head__detail__bottom__position">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span class="photo_taken_location"></span>
-                        </div>
-                        <div class="content__center__post__head__detail__bottom__time">
-                            <i class="far fa-clock"></i>
-                            <span class="photo_taken_time"></span>
-                        </div>
-                    </div>
+      <div class="content__center">
+        <div class="content__center__post" hidden id="post__default">
+          <div class="content__center__post__head">
+            <img
+              src="./img/ducba.jpg"
+              alt="image"
+              class="content__center__post__head__avatar"
+            />
+            <div class="content__center__post__head__detail">
+              <div class="content__center__post__head__detail__top">
+                <input
+                  type="text"
+                  name="title"
+                  class="title"
+                  style="display:none"
+                />
+                <div
+                  class="content__center__post__head__detail__top__left showItem"
+                  style="display:none"
+                >
+                  Saigon Notre-Dame Cathedral
                 </div>
-            </div>
-
-            <img src="./img/ducba.jpg" alt="postImage" class="center__postBoard__image">
-
-            <div class="content__center__post__reaction">
-                <div class="content__center__post__reaction__left">
-                    <div class="react content__center__post__reaction__left__love">
-                        <i class="fas fa-heart"></i>
-                        <span class="photo_like_count">0</span>
-                    </div>
-                    <div class="react content__center__post__reaction__left__comment">
-                        <i class="fas fa-comment"></i>
-                        <span class="photo_comment_count">0</span>
-                    </div>
-                    <div class="react content__center__post__reaction__left__camera">
-                        <i class="fas fa-camera"></i>
-                        <span class="photo_view_count">0</span>
-                    </div>
+                <!-- ./content__center__post__head__detail__top__left -->
+                <div class="dropdown">
+                  <img
+                    src="./img/translate.png"
+                    class="post__icon showItem"
+                    data-toggle="dropdown"
+                    style="display:none"
+                  />
+                  <span
+                    style="display:none"
+                    data-toggle="dropdown"
+                    class="trans"
+                  ></span>
+                  <ul class="dropdown-menu">
+                    <li
+                      class="dropdown-item"
+                      style="display:none;"
+                      id="defaultLang"
+                    >
+                      English
+                    </li>
+                  </ul>
                 </div>
-                <div class="center__postBoard__reaction__right">
-                    <div class="react content__center__post__reaction__right__bookmark">
-                        <i class="fas fa-bookmark"></i>
-                    </div>
+                <!-- ./dropdown -->
+              </div>
+              <!-- ./content__center__post__head__detail__top -->
+              <div class="content__center__post__head__detail__bottom">
+                <div
+                  class="content__center__post__head__detail__bottom__position"
+                >
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span
+                    class="content__center__post__head__detail__bottom__position__detail"
+                    >Sài Gòn, Việt Nam</span
+                  >
+                  <!-- ./content__center__post__head__detail__bottom__position__detail -->
                 </div>
+                <!-- ./content__center__post__head__detail__bottom__position -->
+                <div class="content__center__post__head__detail__bottom__time">
+                  <i class="far fa-clock"></i>
+                  <span
+                    class="content__center__post__head__detail__bottom__time__detail"
+                    >1961</span
+                  >
+                  <!-- ./content__center__post__head__detail__bottom__time__detail -->
+                </div>
+                <!-- ./content__center__post__head__detail__bottom__time -->
+              </div>
+              <!-- ./content__center__post__head__detail__bottom -->
             </div>
-            <div class="content__center__post__comment">
-                <input type="text" name="comment" placeholder="Write a comment" class="commentBox">
-                <span class="fas fa-paper-plane"></span>
+            <!-- ./content__center__post__head__detail -->
+          </div>
+          <!-- ./content__center__post__head -->
+
+          <img
+            src="./img/ducba.jpg"
+            alt="postImage"
+            class="content__center__post__image"
+          />
+          <!-- ./content__center__post__image -->
+
+          <div class="content__center__post__reaction">
+            <div class="content__center__post__reaction__left">
+              <div class="react content__center__post__reaction__left__love">
+                <i class="fas fa-heart"></i>
+                <span class="content__center__post__reaction__left__love__count"
+                  >0</span
+                >
+                <!-- ./content__center__post__reaction__left__love__count -->
+              </div>
+              <!-- ./content__center__post__reaction__left__love__count -->
+              <div class="react content__center__post__reaction__left__comment">
+                <i class="fas fa-comment"></i>
+                <span
+                  class="content__center__post__reaction__left__comment__count"
+                  >0</span
+                >
+                <!-- ./content__center__post__reaction__left__comment__count -->
+              </div>
+              <!-- ./content__center__post__reaction__left__comment -->
+              <div class="react content__center__post__reaction__left__camera">
+                <i class="fas fa-camera"></i>
+                <span
+                  class="content__center__post__reaction__left__camera__count"
+                  >0</span
+                >
+                <!-- ./content__center__post__reaction__left__camera__count -->
+              </div>
+              <!-- ./content__center__post__reaction__left__camera -->
             </div>
+            <!-- ./content__center__post__reaction -->
+            <div class="center__postBoard__reaction__right">
+              <div
+                class="react content__center__post__reaction__right__bookmark"
+              >
+                <i class="fas fa-bookmark"></i>
+              </div>
+              <!-- ./content__center__post__reaction__right__bookmark -->
+            </div>
+            <!-- ./center__postBoard__reaction__right -->
+          </div>
+          <!-- ./content__center__post__reaction -->
+          <div class="content__center__post__comment">
+            <input
+              type="text"
+              name="comment"
+              placeholder="Write a comment"
+              class="commentBox"
+            />
+            <span class="fas fa-paper-plane"></span>
+          </div>
+          <!-- ./content__center__post__comment -->
         </div>
+        <!-- ./content__center__post -->
+      </div>
+      <!-- ./content__center -->
 
+      <div class="content__right"></div>
+      <!-- ./content__right -->
     </div>
+    <!-- ./content -->
 
-    <div class="content__right"></div>
-</div>
-
-<script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
-        crossorigin="anonymous"
-></script>
-<script src="js/toggle-password.js"></script>
-<script src="js/main.js"></script>
-<script src="js/heritagego-service.1.0.0.js"></script>
-<script
-        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"
-></script>
-<script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"
-></script>
-
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/heritagego-service.1.0.0.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="./js/language_dict.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+  </body>
 </html>
